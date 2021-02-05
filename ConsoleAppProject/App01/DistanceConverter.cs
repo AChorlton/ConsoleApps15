@@ -1,4 +1,6 @@
-﻿namespace ConsoleAppProject.App01
+﻿using System;
+
+namespace ConsoleAppProject.App01
 {
     /// <summary>
     /// This application will be able to convert one set of measurement units into another set such as miles into feet.
@@ -18,7 +20,9 @@
         /// </summary>
         public void Run()
         {
-
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
         }
 
         /// <summary>
@@ -27,7 +31,9 @@
         /// </summary>
         private void InputMiles()
         {
-
+            Console.Write("Please insert the number of miles >");
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         /// <summary>
