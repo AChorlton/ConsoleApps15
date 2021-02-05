@@ -51,5 +51,15 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine(miles + " miles is " + feet + " feet!");
         }
+
+        private void OutputHeading()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" ---------------------------");
+            Console.WriteLine("    Convert Miles to Feet   ");
+            Console.WriteLine("       By Alex Chorlton     ");
+            Console.WriteLine(" ---------------------------");
+            Console.WriteLine();
+        }
     }
 }
