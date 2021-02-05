@@ -17,7 +17,7 @@ namespace ConsoleAppProject.App01
         private double feet;
 
         /// <summary>
-        /// 
+        /// Runs the program and carrys out any methods that have been writen allowing the user to begin to convert miles to feet
         /// </summary>
         public void Run()
         {
@@ -40,21 +40,25 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// This is the calculation to convert the number of miles into feet, the 'FEET_IN_MILES' part has been added further up as a public
+        /// method which has added the value of 'FEET_IN_MILES'
         /// </summary>
         private void CalculateFeet()
         {
-            feet = miles * 5280;
+            feet = miles * FEET_IN_MILES;
         }
 
         /// <summary>
-        /// 
+        /// This is the constructor in which the output of the calculation is carried out and shown to the user.
         /// </summary>
         private void OutputFeet()
         {
             Console.WriteLine(miles + " miles is " + feet + " feet!");
         }
 
+        /// <summary>
+        /// This is the heading 'design' that will be output into the console show what the tool is and who created it.
+        /// </summary>
         private void OutputHeading()
         {
             Console.WriteLine();
@@ -63,16 +67,6 @@ namespace ConsoleAppProject.App01
             Console.WriteLine("       By Alex Chorlton       ");
             Console.WriteLine(" ---------------------------\n");
             Console.WriteLine();
-        }
-
-        public void ConvertMilesToFeet()
-        {
-            OutputHeading();
-            InputMiles();
-
-            feet = miles * FEET_IN_MILES;
-
-            OutputFeet();
         }
     }
 }
