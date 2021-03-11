@@ -88,8 +88,8 @@ namespace ConsoleAppProject.App01
     }
 
     /// <summary>
-        /// Calculate the final converted distance value depending
-        /// on which from and to units have been chosen.
+        /// This is a method which will calculate the final distance's value 
+        /// depending on the distance input unit and the distance output unit.
         /// </summary>
         private void CalculateToValue()
         {
