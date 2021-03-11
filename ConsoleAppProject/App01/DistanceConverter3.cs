@@ -9,7 +9,7 @@
  /// calculates and outputs the equivalent number of to units
  /// </summary>
  /// <author>
- /// Derek Peacock
+ /// Alex Chorlton
  /// </author>
 public class LengthConverter
 {
@@ -48,4 +48,36 @@ public class LengthConverter
         string value = Console.ReadLine();
         return Convert.ToDouble(value);
     }
+
+    /// <summary>
+    /// Display all the conversion factors between the
+    /// different length units
+    /// </summary>
+    public void OutputFactors()
+    {
+        for (int i = 0; i < NUMBER_OF_UNITS; i++)
+        {
+            for (int j = 0; j < NUMBER_OF_UNITS; j++)
+            {
+                Console.Write(" From " + units[i]);
+                Console.Write(" to " + units[j]);
+                Console.WriteLine(" Factor = " + conversionFactors[i, j]);
+            }
+            Console.WriteLine();
+        }
+    }
+
+    /// <summary>
+    /// Output a Heading for the length converter
+    /// </summary>
+    private void OutputHeading()
+    {
+        Console.WriteLine();
+        Console.WriteLine("  -----------------------------");
+        Console.WriteLine("         Convert Lengths       ");
+        Console.WriteLine("         by Alex CHorlton      ");
+        Console.WriteLine("  -----------------------------");
+        Console.WriteLine();
+    }
+
 }
