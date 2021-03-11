@@ -14,9 +14,7 @@ namespace ConsoleAppProject.App01
         public const double METRES_IN_MILES = 1609.34;
         public const double MILES_IN_KILOMETRES = 0.621371;
 
-        private double miles;
-
-        private double feet;
+        
 
         // Distance Units
         private double miles;
@@ -68,11 +66,34 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// This is the constructor in which the output of the calculation is carried out and shown to the user.
+        /// Output how many feet there are in the given miles
         /// </summary>
         private void OutputFeet()
         {
-            Console.WriteLine(miles + " miles is " + feet + " feet!");
+            Console.WriteLine();
+            Console.WriteLine($"  {miles} miles is {feet} feet!");
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Output the number of metres in the given distance in miles
+        /// </summary>
+        private void OutputMetres()
+        {
+            Console.WriteLine();
+            Console.WriteLine($"  {miles} miles is {metres} metres!");
+            Console.WriteLine();
+        }
+
+
+        /// <summary>
+        /// Output the number of miles in the given distance in Kilometres
+        /// </summary>
+        private void OutputMiles()
+        {
+            Console.WriteLine();
+            Console.WriteLine("  " + kiloMetres + " Kilometres is " + miles + " miles!");
+            Console.WriteLine();
         }
 
         /// <summary>
