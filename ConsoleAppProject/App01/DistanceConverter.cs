@@ -63,7 +63,7 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine();
             Console.WriteLine("\n ---------------------------");
-            Console.WriteLine("    Convert Miles to Feet     ");
+            Console.WriteLine("     Convert Miles to Feet     ");
             Console.WriteLine("       By Alex Chorlton       ");
             Console.WriteLine(" ---------------------------\n");
             Console.WriteLine();
