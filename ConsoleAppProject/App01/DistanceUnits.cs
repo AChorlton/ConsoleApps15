@@ -46,5 +46,43 @@ namespace ConsoleAppProject.App01
         public const double MetresInFeet = 0.3048;
         public const double KilometresInFeet = 1 / FeetInKilometres;
         public const double MilesInFeet = 1.0 / FeetInMiles;
+
+        // Available Distance Units
+        public const string Feet = "Feet";
+        public const string Metres = "Metres";
+        public const string Kilometres = "Kilometres";
+        public const string Miles = "Miles";
+        public const string NoUnit = "No Unit";
+
+        // Convert from distance value and unit
+        private double fromValue;
+        private DistanceUnit fromUnit;
+
+        // Convert to distance value and unit
+        private double toValue;
+        private DistanceUnit toUnit;
     }
+
+        /// <summary>
+        /// Calculate how many toUnits there are in the given fromUnits
+        /// </summary>
+        public void Execute()
+        {
+            OutputHeading();
+
+            fromUnit = SelectUnit(" Enter unit to convert from > ");
+
+            if (fromUnit != DistanceUnit.NoUnit)
+            {
+                fromValue = InputNumber($" Enter the number of {fromUnit} > ");
+
+                toUnit = SelectUnit(" Enter unit to convert to > ");
+
+                if (toUnit != DistanceUnit.NoUnit)
+                {
+                    CalculateToValue();
+                    OutputResult();
+                }
+            }
+        }
 }
