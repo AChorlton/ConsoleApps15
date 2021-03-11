@@ -63,26 +63,66 @@ namespace ConsoleAppProject.App01
         private DistanceUnit toUnit;
     }
 
-        /// <summary>
-        /// Calculate how many toUnits there are in the given fromUnits
-        /// </summary>
-        public void Execute()
+    /// <summary>
+    /// Calculate how many toUnits there are in the given fromUnits
+    /// </summary>
+ 
+    public void Execute()
+    {
+        OutputHeading();
+
+        fromUnit = SelectUnit(" Enter unit to convert from > ");
+
+        if (fromUnit != DistanceUnit.NoUnit)
         {
-            OutputHeading();
+            fromValue = InputNumber($" Enter the number of {fromUnit} > ");
 
-            fromUnit = SelectUnit(" Enter unit to convert from > ");
+            toUnit = SelectUnit(" Enter unit to convert to > ");
 
-            if (fromUnit != DistanceUnit.NoUnit)
+            if (toUnit != DistanceUnit.NoUnit)
             {
-                fromValue = InputNumber($" Enter the number of {fromUnit} > ");
-
-                toUnit = SelectUnit(" Enter unit to convert to > ");
-
-                if (toUnit != DistanceUnit.NoUnit)
-                {
                     CalculateToValue();
                     OutputResult();
-                }
             }
         }
+    }
+
+    /// <summary>
+        /// Calculate the final converted distance value depending
+        /// on which from and to units have been chosen.
+        /// </summary>
+        private void CalculateToValue()
+        {
+            if ((fromUnit == DistanceUnit.Miles) && 
+                (toUnit == DistanceUnit.Feet))
+            {
+                toValue = fromValue * FeetInMiles;
+            }
+            else if ((fromUnit == DistanceUnit.Miles) && 
+                     (toUnit == DistanceUnit.Metres))
+            {
+                toValue = fromValue * MetresInMiles;
+            }
+            else if ((fromUnit == DistanceUnit.Miles) && 
+                (toUnit == DistanceUnit.Kilometres))
+            {
+                toValue = fromValue * KilometresInMiles;
+            }
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Miles))
+            {
+                toValue = fromValue * MilesInKilometres;
+            }
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Metres))
+            {
+                toValue = fromValue * MetresInKilometres;
+            }
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Feet))
+            {
+                toValue = fromValue * FeetInKilometres;
+            }
+        }
+
 }
