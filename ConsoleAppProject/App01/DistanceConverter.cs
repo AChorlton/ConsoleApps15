@@ -48,12 +48,23 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// This is the calculation to convert the number of miles into feet, the 'FEET_IN_MILES' part has been added further up as a public
-        /// method which has added the value of 'FEET_IN_MILES'
+        /// Prompt the user to input the number of kilometres
         /// </summary>
-        private void CalculateFeet()
+        private void InputKilometres()
         {
-            feet = miles * FEET_IN_MILES;
+            Console.Write("  Enter the number of Kilometres >");
+            string value = Console.ReadLine();
+            kiloMetres = Convert.ToDouble(value);
+        }
+
+        /// <summary>
+        /// Prompt the user to input the number of miles
+        /// </summary>
+        private void InputMiles()
+        {
+            Console.Write("  Enter the number of miles >");
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         /// <summary>
@@ -77,4 +88,32 @@ namespace ConsoleAppProject.App01
             Console.WriteLine();
         }
     }
+
+        /// <summary>
+        /// Calculate how many metres there are in the given miles
+        /// </summary>
+        private void CalculateMetres()
+        {
+            OutputHeading();
+            InputMiles();
+
+            metres = miles * METRES_IN_MILES;
+
+            OutputMetres();
+        }
+
+        /// <summary>
+        /// Calculate how many Miles there are in the given Kilometres
+        /// </summary>
+        private void CalculateMiles()
+        {
+            OutputHeading();
+            InputKilometres();
+
+            miles = kiloMetres * MILES_IN_KILOMETRES;
+
+            OutputMiles();
+        }
+
+        
 }
