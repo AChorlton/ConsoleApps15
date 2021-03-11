@@ -25,7 +25,7 @@ namespace ConsoleAppProject.App01
     /// fromUnits.
     /// </summary>
     /// <author>
-    /// Alex Chorlton
+    /// Alex Chorlton Version 0.1
     /// </author>
     
     class DistanceConverter3
@@ -63,31 +63,7 @@ namespace ConsoleAppProject.App01
         private DistanceUnit toUnit;
     }
 
-    /// <summary>
-    /// Calculate how many toUnits there are in the given fromUnits
-    /// </summary>
- 
-    public void Execute()
-    {
-        OutputHeading();
-
-        fromUnit = SelectUnit(" Enter unit to convert from > ");
-
-        if (fromUnit != DistanceUnit.NoUnit)
-        {
-            fromValue = InputNumber($" Enter the number of {fromUnit} > ");
-
-            toUnit = SelectUnit(" Enter unit to convert to > ");
-
-            if (toUnit != DistanceUnit.NoUnit)
-            {
-                    CalculateToValue();
-                    OutputResult();
-            }
-        }
-    }
-
-    /// <summary>
+        /// <summary>
         /// This is a method which will calculate the final distance's value 
         /// depending on the distance input unit and the distance output unit.
         /// </summary>
@@ -125,4 +101,62 @@ namespace ConsoleAppProject.App01
             }
         }
 
+    /// <summary>
+    /// Calculate how many toUnits there are in the given fromUnits
+    /// </summary>
+ 
+    public void Execute()
+    {
+        OutputHeading();
+
+        fromUnit = SelectUnit(" Enter unit to convert from > ");
+
+        if (fromUnit != DistanceUnit.NoUnit)
+        {
+            fromValue = InputNumber($" Enter the number of {fromUnit} > ");
+
+            toUnit = SelectUnit(" Enter unit to convert to > ");
+
+            if (toUnit != DistanceUnit.NoUnit)
+            {
+                    CalculateToValue();
+                    OutputResult();
+            }
+        }
+    }
+
+        /// <summary>
+        /// Output a Heading for the distance converter
+        /// </summary>
+        private void OutputHeading()
+        {
+            Console.WriteLine();
+            Console.WriteLine("  -----------------------------");
+            Console.WriteLine("         Convert Distances     ");
+            Console.WriteLine("         by Alex Chorlton      ");
+            Console.WriteLine("  -----------------------------");
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Prompt the user to input a double number
+        /// </summary>
+        private double InputNumber(string prompt)
+        {
+            Console.Write(prompt);
+            string value = Console.ReadLine();
+            return Convert.ToDouble(value);
+        }
+
+        /// <summary>
+        /// Output the number of metres in the given distance in miles
+        /// </summary>
+        private void OutputResult()
+        {
+            Console.WriteLine();
+            Console.WriteLine($"  {fromValue} {fromUnit} is {toValue} {toUnit} !");
+            Console.WriteLine();
+        }
+
+        
 }
