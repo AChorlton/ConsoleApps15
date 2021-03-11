@@ -11,10 +11,18 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
+        public const double METRES_IN_MILES = 1609.34;
+        public const double MILES_IN_KILOMETRES = 0.621371;
 
         private double miles;
 
         private double feet;
+
+        // Distance Units
+        private double miles;
+        private double feet;
+        private double metres;
+        private double kiloMetres;
 
         /// <summary>
         /// Runs the program and carrys out any methods that have been writen allowing the user to begin to convert miles to feet
