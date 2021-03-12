@@ -80,4 +80,33 @@ public class LengthConverter
         Console.WriteLine();
     }
 
+    /// <summary>
+    /// Output the length converted from one unit to another
+    /// </summary>
+    private void OutputResult()
+    {
+        Console.WriteLine();
+        Console.WriteLine($" {fromNumber} {units[fromUnit]} is {toNumber } {units[toUnit]}");
+        Console.WriteLine();
+    }
+
+    /// <summary>
+    /// Prompt the user to select the unit they wish to conver from
+    /// and the unit they wish to conver to follwed by the length.
+    /// The resulting length is output.
+    /// </summary>
+    public void Execute()
+    {
+        OutputHeading();
+
+        fromUnit = SelectUnitNo();
+        toUnit = SelectUnitNo();
+
+        fromNumber = InputNumber(" Enter the number of "
+            + units[fromUnit] + " > ");
+
+        toNumber = fromNumber * conversionFactors[fromUnit, toUnit];
+
+        OutputResult();
+    }
 }
