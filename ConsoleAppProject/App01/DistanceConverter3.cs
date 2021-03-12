@@ -1,6 +1,6 @@
 ﻿using System;
-{
-    namespace ConsoleAppProject.App01
+
+namespace ConsoleAppProject.App01
 
  /// <summary>
  /// This class offers methods for prompting the user
@@ -109,4 +109,23 @@ public class LengthConverter
 
         OutputResult();
     }
+
+    /// <summary>
+    /// Select a unit number from the list of available units
+    /// </summary>
+    private int SelectUnitNo()
+    {
+        Console.WriteLine();
+        Console.WriteLine(" Please select unit");
+        Console.WriteLine();
+
+        for (int i = 0; i < NUMBER_OF_UNITS; i++)
+        {
+            Console.WriteLine($"{i + 1}. {units[i]}");
+        }
+
+        int choice = (int)InputNumber(" Enter choice no > ");
+        return choice - 1;
+    }
 }
+
