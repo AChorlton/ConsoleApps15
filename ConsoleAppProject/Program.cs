@@ -1,5 +1,4 @@
 ﻿using ConsoleAppProject.App01;
-using System;
 
 namespace ConsoleAppProject
 {
