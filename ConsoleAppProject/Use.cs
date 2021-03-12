@@ -1,9 +1,8 @@
 ﻿using System;
 
-
-namespace CO453_ConsoleAppAnswer
+namespace ConsoleAppProject
 {
-    public static class UserLib
+    public static class Use
     {
         /// <summary>
         /// This method outputs a heading showing the title

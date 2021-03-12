@@ -22,7 +22,7 @@ namespace ConsoleAppProject
             string [] choices = { 
                 "App01: Distance Converter", "Quit" };
 
-            int choiceNo = UserLib.SelectChoice(choices);
+            int choiceNo = Use.SelectChoice(choices);
 
             if (choiceNo == 1)
             {
