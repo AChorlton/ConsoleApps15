@@ -17,7 +17,7 @@ namespace ConsoleAppProject
 
         public static void Main()
         {
-            UserLib.OutputHeading(" C# Console Applications 2020");
+            Use.OutputHeading(" C# Console Applications 2020");
 
             string [] choices = { 
                 "App01: Distance Converter", "Quit" };
