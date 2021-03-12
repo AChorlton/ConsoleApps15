@@ -3,26 +3,33 @@ using System;
 
 namespace ConsoleAppProject
 {
+
     /// <summary>
-    /// The main method in this class is called first
-    /// when the application is started.  It will be used
-    /// to start Apps 01 to 05 for CO453 CW1
-    /// 
-    /// This Project has been modified by:
-    /// Alex Chorlton 31/01/2021
+    /// This class runs first and create a DistanceConverter
+    /// allowing the user three ways of converting distances
     /// </summary>
+    /// <author>
+    /// Alex Chorlton
+    /// </author>
     public static class Program
     {
-        public static void Main(string[] args)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            
-            Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
-            Console.WriteLine();
-            Console.Beep();
+        public static NetworkUI Network { get; set; }
 
-            DistanceConverter convert = new DistanceConverter();
-            convert.Run();
+        public static void Main()
+        {
+            UserLib.OutputHeading(" C# Console Applications 2020");
+
+            string [] choices = { 
+                "App01: Distance Converter", "Quit" };
+
+            int choiceNo = UserLib.SelectChoice(choices);
+
+            if (choiceNo == 1)
+            {
+                DistanceConverter1 converter = new DistanceConverter1();
+                converter.ConvertDistance();
+            }
+
         }
     }
 }
