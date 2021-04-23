@@ -1,7 +1,4 @@
 ﻿using ConsoleAppProject.App01;
-using ConsoleAppProject.App02;
-using ConsoleAppProject.App03;
-using ConsoleAppProject.App04;
 using ConsoleAppProject.Helpers;
 using System;
 
@@ -19,6 +16,8 @@ namespace ConsoleAppProject
     {
         public static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
+
             ConsoleHelper.OutputHeading("CO453 C# Programming - MAIN MENU", 0.2);
             string[] choices = {
                 "APP01: Distance Converter",
@@ -50,7 +49,7 @@ namespace ConsoleAppProject
             }
             else
             {
-                Console.WriteLine("Please chose an application...");
+                Console.WriteLine("Please make your choice");
             }
 
         }
