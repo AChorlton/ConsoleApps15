@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
+    ///<author>
+    /// Alex Chorlton
+    /// 100174372
+    /// </author>
+
 namespace ConsoleAppProject.App05
 {
     /// <summary>
