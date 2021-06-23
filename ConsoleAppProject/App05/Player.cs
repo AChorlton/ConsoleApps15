@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-    ///<author>
+    /// <author>
     /// Alex Chorlton
     /// 100174372
     /// </author>
@@ -10,7 +10,7 @@ using System.Text;
 namespace ConsoleAppProject.App05
 {
     /// <summary>
-    /// This is where the user will input their name allowing them to 
+    /// This is where the user will input their name
     /// </summary>
     public class Player
     {
