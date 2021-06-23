@@ -42,3 +42,35 @@ namespace ConsoleAppProject.App05
             } while (!wantToQuit);
         }
 
+        public void StartGame()
+        {
+            SetupConsole();
+
+            ConsoleHelper.OutputHeading("  Rock-Paper-Scissors ");
+
+            if(game == null)
+            {
+                Console.Write(" Please enter your name > ");
+                string name = Console.ReadLine();
+
+                game = new Game("Alex");
+            }
+
+            game.Start();
+        }
+
+        private void DisplayChoice(GameChoices choice)
+        {
+            if(choice == GameChoices.Scissors)
+            {
+                GameImages.DrawScissors(10, 10);
+            }
+        }
+
+        private void GetPlayerChoice()
+        {
+        }
+
+        
+
+
