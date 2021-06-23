@@ -70,6 +70,20 @@ namespace ConsoleAppProject.App05
         private void GetPlayerChoice()
         {
         }
+           
+        private void SetupConsole()
+        {
+            Console.SetWindowSize(100, 40);
+            Console.SetBufferSize(100, 40);
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Clear();
+        }
+    }
+}
+
 
         
 
