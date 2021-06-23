@@ -4,7 +4,7 @@
     /// Alex Chorlton
     /// 100174372
     /// </author>
-    /// <summary>
+    /// <summary> 
     /// This class contains the different player choices within the game
     /// </summary>
 
